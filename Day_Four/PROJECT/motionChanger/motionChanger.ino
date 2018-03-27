@@ -1,11 +1,12 @@
 /*
+  MOTION CHANGER 
+  
   Girls Who Code Campus
   Day 4: Motion Changer Challenge
-  Example 2
+  Project Example 1
 
   This example uses the LilyPad accelerometer and the LilyPad Arduino
-  SimpleSnap to create a wearable device that senses tilt. This sketch uses
-  functions to control the LEDs' behavior
+  SimpleSnap to create a wearable device that senses tilt.
 
    If the Motion Changer is oriented straight up, the yellow LED turns on.
    If the Motion Changer is oriented back, the blue LED turns on.
@@ -49,15 +50,15 @@ void setup() {
 
   //Comment this out once you have your accelerometer calibrated
 
-  /*
-    // turn on LED to signal the start of the calibration period:
-    pinMode(13, OUTPUT);
-    digitalWrite(13, HIGH);
+  // turn on LED to signal the start of the calibration period:
+  pinMode(13, OUTPUT);
+  digitalWrite(13, HIGH);
 
-    Serial.println("Calibration beginning");
+  Serial.println("Calibration beginning");
+  Serial.println("Move your accelerometer around");
 
-    // calibrate during the first five seconds
-    while (millis() < 5000) {
+  // calibrate during the first five seconds
+  while (millis() < 5000) {
     zValue = analogRead(zPin);
 
     // record the maximum sensor value
@@ -69,12 +70,12 @@ void setup() {
     if (zValue < zMin) {
       zMin = zValue;
     }
-    }
+  }
 
-    // signal the end of the calibration period
-    digitalWrite(13, LOW);
-    Serial.println("Calibration ending");
-  */
+  // signal the end of the calibration period
+  digitalWrite(13, LOW);
+  Serial.println("Calibration ending");
+
   //End comment
 }
 
@@ -94,48 +95,28 @@ void loop() {
 
   //Conditional to determine left/forward tilt
   if (zValue < 110) {
-    turnOnLeftLED();
+    digitalWrite(leftLED, HIGH);
+    digitalWrite(middleLED, LOW);
+    digitalWrite(rightLED, LOW);
 
     //Conditional to determine center orientation
   } else if (zValue > 110 && zValue < 130) {
-    turnOnMiddleLED();
+    digitalWrite(middleLED, HIGH);
+    digitalWrite(leftLED, LOW);
+    digitalWrite(rightLED, LOW);
 
     //Conditional to determine right/backward tilt
   } else if (zValue > 130) {
-    turnOnRightLED();
+    digitalWrite(rightLED, HIGH);
+    digitalWrite(leftLED, LOW);
+    digitalWrite(middleLED, LOW);
 
     //Just in case, turn off all LEDs if you get a weird value
   } else {
-    turnOffAllLEDs();
+    digitalWrite(leftLED, LOW);
+    digitalWrite(middleLED, LOW);
+    digitalWrite(rightLED, LOW);
   }
 
 
 }
-
-void turnOnLeftLED() {
-  digitalWrite(leftLED, HIGH); //Write the left LED HIGH
-  digitalWrite(middleLED, LOW); //Write the middle LED HIGH
-  digitalWrite(rightLED, LOW); //Write the middle LED LOW
-
-}
-
-void turnOnMiddleLED() {
-  digitalWrite(middleLED, HIGH); //Write the middle LED HIGH
-  digitalWrite(leftLED, LOW); //Write the left LED LOW
-  digitalWrite(rightLED, LOW); //Write the right LED LOW
-}
-
-void turnOnRightLED() {
-  digitalWrite(rightLED, HIGH); //Write the right LED HIGH
-  digitalWrite(leftLED, LOW); //Write the left LED LOW
-  digitalWrite(middleLED, LOW); //Write the middle LED LOW
-
-}
-
-void turnOffAllLEDs() {
-  digitalWrite(leftLED, LOW);
-  digitalWrite(middleLED, LOW);
-  digitalWrite(rightLED, LOW);
-
-}
-
