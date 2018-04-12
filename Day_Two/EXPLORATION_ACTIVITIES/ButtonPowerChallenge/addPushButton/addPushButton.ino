@@ -3,7 +3,7 @@
 
   Girls Who Code
   Day 2: Button Power Challenge
-  Example 2
+  Example 1
 
   This example uses the LilyPad Development Board to turn an LED on and off 
   using a push button.

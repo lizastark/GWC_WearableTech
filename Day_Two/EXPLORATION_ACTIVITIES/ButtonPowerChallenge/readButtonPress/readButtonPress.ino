@@ -3,7 +3,7 @@
 
   Girls Who Code
   Day 2: Button Power Challenge
-  Example 1
+  Example 2
 
   This example uses the LilyPad Development Board to read digital input
   from pin A4, then prints the results to the Serial Monitor. 
