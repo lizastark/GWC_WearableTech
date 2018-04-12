@@ -5,7 +5,7 @@
   Day 2: Button Power Challenge
   Example 1
 
-  This example uses the LilyPad ProtoSnap Plus board to read digital input
+  This example uses the LilyPad Development Board to read digital input
   from pin A4, then prints the results to the Serial Monitor. 
 
   If the button is pressed, the Serial Monitor prints 1. 
@@ -21,7 +21,7 @@
 */
 
 // our push button is on A4. Give it a name:
-int pushButton = A4;
+int pushButton = A5;
 
 // the setup routine runs once when you press reset:
 void setup() {

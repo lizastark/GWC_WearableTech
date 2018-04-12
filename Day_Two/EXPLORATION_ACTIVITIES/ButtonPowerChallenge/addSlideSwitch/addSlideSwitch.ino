@@ -5,16 +5,16 @@
   Day 2: Button Power Challenge
   Example 3
 
-  This example uses the LilyPad ProtoSnap Plus board to turn the green LED on when the slide
+  This example uses the LilyPad Development Board to turn the green LED on when the slide
   switch is on and the red LED on when the slide switch is off.
 
 */
 
 // constants won't change. They're used here to set pin numbers:
-const int buttonPin = A9;   // the number of the slide switch pin
+const int buttonPin = 2;   // the number of the slide switch pin
 
-const int redLED =  6;      // the number of the red LED pin
-const int greenLED = A7;    // the number of the green LED pin
+const int redLED =  9;      // the number of the red LED pin
+const int greenLED = 11;    // the number of the green LED pin
 
 
 // variables will change:

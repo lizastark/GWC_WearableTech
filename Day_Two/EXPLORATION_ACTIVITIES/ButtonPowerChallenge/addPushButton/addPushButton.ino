@@ -5,7 +5,7 @@
   Day 2: Button Power Challenge
   Example 2
 
-  This example uses the LilyPad ProtoSnap Plus board to turn an LED on and off 
+  This example uses the LilyPad Development Board to turn an LED on and off 
   using a push button.
 
   If the button is pressed, the LED turns on.
@@ -18,8 +18,8 @@
 
 // constants won't change. They're used here to
 // set pin numbers:
-const int buttonPin = A4;     // the number of the push button pin
-const int ledPin =  A5;      // the number of the LED pin
+const int buttonPin = A5;     // the number of the push button pin
+const int ledPin =  A2;      // the number of the LED pin
 
 
 // variables will change:
