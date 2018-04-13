@@ -6,7 +6,7 @@
   Example 2
 
   This example uses the LilyPad Development Board to read digital input
-  from pin A4, then prints the results to the Serial Monitor. 
+  from pin A5, then prints the results to the Serial Monitor. 
 
   If the button is pressed, the Serial Monitor prints 1. 
   - 1, HIGH, TRUE all mean the same thing. If you see a "1" it means true or on
@@ -20,7 +20,7 @@
 
 */
 
-// our push button is on A4. Give it a name:
+// our push button is on A5. Give it a name:
 int pushButton = A5;
 
 // the setup routine runs once when you press reset:
