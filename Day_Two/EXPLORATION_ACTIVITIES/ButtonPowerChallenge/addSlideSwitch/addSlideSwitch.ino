@@ -39,8 +39,8 @@ void loop() {
   buttonState = digitalRead(buttonPin);
 
   // check if the slide switch is on or off.
-  // if it on, the buttonState is HIGH:
-  if (buttonState == HIGH) {
+  // if it on, the buttonState is low:
+  if (buttonState == LOW) {
 
     // turn on the green LED on and the red LED off:
     digitalWrite(greenLED, HIGH);
