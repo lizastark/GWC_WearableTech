@@ -7,9 +7,7 @@
 
   This example uses the LilyPad ProtoSnap Plus board to read the raw values
   coming in from an analog sensor (e.g. light sensor, accelerometer,
-  bend sensor, etc) and map them to a usable range with the map() function. 
-  It reads the light sensor input from pin A2, then maps the values to control 
-  the brightness of an LED. 
+  bend sensor, etc) and map them to a usable range with the map() function.
 
   If the sensor is exposed to a lot of light, the LED will turn off.   
   The darker it gets, the brighter the LED will become.
@@ -18,7 +16,7 @@
 */
 
 //These variables are constant (they do not change):
-const int sensorPin = A2;   // select the input pin for the sensor
+const int sensorPin = A6;   // select the input pin for the sensor
 const int ledPin = 6;       // select the pin for the LED
 
 //These variables will change:
