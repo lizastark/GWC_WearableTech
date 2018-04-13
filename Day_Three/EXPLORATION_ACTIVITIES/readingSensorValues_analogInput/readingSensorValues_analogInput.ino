@@ -5,20 +5,19 @@
   Day 3: Analog Input
   Example 2
 
-  This example uses the LilyPad ProtoSnap Plus board to read the raw values
+  This example uses the LilyPad ProtoSnap Development board to read the raw values
   coming in from an analog sensor (e.g. light sensor, accelerometer,
-  bend sensor, etc). It reads the light sensor input from pin A2, then prints
-  the results to the Serial Monitor.
+  bend sensor, etc). It reads the light sensor input from pin A6, then writes them to the LED
+  on pin 6 and prints the results to the Serial Monitor.
 
   If the sensor is exposed to a lot of light, the values will be higher. 
   The darker it gets, the lower the values.
-  
-
+ 
 
 */
 
 //These variables are constant (they do not change):
-const int sensorPin = A2;    // select the input pin for the sensor
+const int sensorPin = A6;    // select the input pin for the sensor
 const int ledPin = 6;     // select the pin for the LED
 
 //These variables will change:
