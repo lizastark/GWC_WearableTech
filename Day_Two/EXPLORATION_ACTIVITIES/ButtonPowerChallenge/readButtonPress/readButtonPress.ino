@@ -8,11 +8,11 @@
   This example uses the LilyPad Development Board to read digital input
   from pin A5, then prints the results to the Serial Monitor. 
 
-  If the button is pressed, the Serial Monitor prints 1. 
-  - 1, HIGH, TRUE all mean the same thing. If you see a "1" it means true or on
+  If the button is not pressed, the Serial Monitor prints 1. 
+  - 1, HIGH
   
-  If the button is not pressed, the Serial Monitor prints 0.
-   - 0, LOW, FALSE all mean the same thing. If you see a "0" it means false or off
+  If the button is pressed, the Serial Monitor prints 0.
+   - 0, LOW
 
   This sketch uses the Button example (File > Examples > Basic >
   DigitalReadSerial) or http://www.arduino.cc/en/Tutorial/DigitalReadSerial.
