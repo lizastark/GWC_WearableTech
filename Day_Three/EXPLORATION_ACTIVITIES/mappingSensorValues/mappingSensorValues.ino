@@ -9,8 +9,8 @@
   coming in from an analog sensor (e.g. light sensor, accelerometer,
   bend sensor, etc) and map them to a usable range with the map() function.
 
-  If the sensor is exposed to a lot of light, the LED will turn off.   
-  The darker it gets, the brighter the LED will become brighter.
+  If the sensor is exposed to a lot of light, the LED will become dim.
+  The darker it gets, the brighter the LED will become.
 
 
 */
@@ -29,7 +29,7 @@ void setup() {
   //Tell Arduino we want this pin to be an output
   pinMode(ledPin, OUTPUT);
 
-//Tell Arduino we want this pin to be an input
+  //Tell Arduino we want this pin to be an input
   pinMode(sensorPin, INPUT);
 
   //Start the serial monitor
@@ -41,6 +41,7 @@ void loop() {
   // read the value from the sensor:
   sensorValue = analogRead(sensorPin);
 
+  // print the raw values for easy comparison
   Serial.print("Raw sensor reading = ");
   Serial.print(sensorValue);
   Serial.print("\t");
@@ -58,7 +59,7 @@ void loop() {
   // Tinker around with these values until you get the behavior you want.
 
   //map(value, fromLow, fromHigh, toLow, toHigh)
-  newSensorValue = map(sensorValue, 0, 60, 0, 255);
+  newSensorValue = map(sensorValue, 15, 160, 0, 255);
 
   //print the new value to the serial monitor
   Serial.print("Mapped value = ");
