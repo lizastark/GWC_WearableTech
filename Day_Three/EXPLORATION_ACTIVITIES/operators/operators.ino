@@ -53,21 +53,21 @@ void loop() {
   Serial.print(sensorValue);
   Serial.print("\t");
 
-  // If the sensor value is greater than or equal to 75...
+  // If the sensor value is greater than or equal to 250...
   if (sensorValue <= 250) {
 
     // turn on the red LED.
     digitalWrite(redLED, HIGH);
     Serial.println("Red LED on");
 
-    // If the sensor value is greater than 76 AND less than 150...
+    // If the sensor value is greater than 250 AND less than 300...
   } else if ((sensorValue > 250) && (sensorValue < 300)) {
 
     // turn on the green LED.
     digitalWrite(greenLED, HIGH);
     Serial.println("Green LED on");
 
-    // If the sensor value is greater than 151 AND less than 255...
+    // If the sensor value is greater than 300 AND less than 335...
   } else if ((sensorValue > 300) && (sensorValue < 335)) {
 
     // turn on the blue LED.
