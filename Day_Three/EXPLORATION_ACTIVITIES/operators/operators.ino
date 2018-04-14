@@ -1,19 +1,17 @@
 /*
-  IF/ELSE STATEMENTS
+  OPERATORS
 
   Girls Who Code
   Day 3: Conditionals && Operators
-  Example 5
+  Example 4
 
   This example uses the LilyPad ProtoSnap Development board to demonstrate
-  the use of if() and else if() statements. It reads the state of the light sensor on pin A6
+  the use of operators in if statements. It reads the state of the light sensor on pin A6
   (an analog input), then turns on an LED depending on the values:
-  - if less than or equal to 75, turn on the red LED
-  - if greater than 76 and less than 150, turn on the green LED
-  - if greater than 151 and less than 255, turn on blue LED
+  - if less than or equal to 250, turn on the red LED
+  - if greater than 250 and less than 300, turn on the green LED
+  - if greater than 300 and less than 335, turn on blue LED
   - else, turn off all LEDs
-
-  ************* NEED TO CHANGE THESE VALUES *************
 
   This sketch uses the ifStatementConditional example (File > Examples > Control >
   ifStatementConditional) or http://www.arduino.cc/en/Tutorial/IfStatement.

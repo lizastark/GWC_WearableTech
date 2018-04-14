@@ -3,7 +3,7 @@
 
   Girls Who Code
   Day 3: Conditionals && Operators
-  Example 4
+  Example 3
 
   This example uses the LilyPad ProtoSnap Development board to demonstrate
   the use of if() statements. It reads the state of the light sensor on pin A6
