@@ -1,12 +1,12 @@
 /*
-  IF STATEMENTS
+  IF ELSE STATEMENTS
 
   Girls Who Code
-  Day 3: Intro to Conditionals
+  Day 3: Conditionals && Operators
   Example 4
 
-  This example uses the LilyPad ProtoSnap Plus board to demonstrate
-  the use of if() statements. It reads the state of the light sensor on pin A2
+  This example uses the LilyPad ProtoSnap Development board to demonstrate
+  the use of if() statements. It reads the state of the light sensor on pin A6
   (an analog input) and turns on an LED only if the light sensor goes
   above a certain threshold level. It prints the analog value regardless
   of the level.
@@ -18,9 +18,9 @@
 */
 
 //These variables are constant (they do not change):
-const int sensorPin = A2;   // select the input pin for the sensor
+const int sensorPin = A6;   // select the input pin for the sensor
 const int ledPin = 6;       // select the pin for the LED
-const int threshold = 400;  // an arbitrary threshold level that's in 
+const int threshold = 250;  // an arbitrary threshold level that's in 
                             // the range of the analog input
 
 //These variables will change:
@@ -45,7 +45,7 @@ void loop() {
   // read the value from the sensor:
   sensorValue = analogRead(sensorPin);
 
-  Serial.print("Raw sensor reading = ");
+  Serial.print("Sensor = ");
   Serial.print(sensorValue);
   Serial.print("\t");
 
@@ -53,19 +53,19 @@ void loop() {
   if (sensorValue > threshold) {
 
     // turn on the LED.
-    digitalWrite(ledPin, HIGH);
-
-    // Print the status
-    Serial.print("Status: Above the threshold")
-
-    // If it is not greater than the threshold...
-  } else {
-
-    // turn off the LED.
     digitalWrite(ledPin, LOW);
 
     // Print the status
-    Serial.print("Status: Below the threshold")
+    Serial.println("Status: Above threshold");
+
+    // If it is not greater than the threshold...
+  } else if(sensorValue < threshold) {
+
+    // turn off the LED.
+    digitalWrite(ledPin, HIGH);
+
+    // Print the status
+    Serial.println("Status: Below threshold");
   }
 
 }
