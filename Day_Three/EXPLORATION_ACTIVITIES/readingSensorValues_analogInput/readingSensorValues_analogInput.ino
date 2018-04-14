@@ -29,9 +29,8 @@ void setup() {
   //Tell Arduino we want this pin to be an output
   pinMode(ledPin, OUTPUT);
 
-  //We need to activate a special functionality to reduce the
-  //noise in our sensor. If you don't use INPUT_PULLUP
-  pinMode(sensorPin, INPUT_PULLUP);
+  //Tell Arduino we want this pin to be an input
+  pinMode(sensorPin, INPUT);
 
   //Start the serial monitor
   Serial.begin(9600);

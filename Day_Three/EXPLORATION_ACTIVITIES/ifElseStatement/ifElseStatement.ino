@@ -20,8 +20,8 @@
 //These variables are constant (they do not change):
 const int sensorPin = A6;   // select the input pin for the sensor
 const int ledPin = 6;       // select the pin for the LED
-const int threshold = 250;  // an arbitrary threshold level that's in 
-                            // the range of the analog input
+const int threshold = 250;  // an arbitrary threshold level that's in
+// the range of the analog input
 
 //These variables will change:
 int sensorValue = 0;        // variable to store the value coming from the sensor
@@ -31,10 +31,9 @@ void setup() {
 
   //Tell Arduino we want this pin to be an output
   pinMode(ledPin, OUTPUT);
-
-  //We need to activate a special functionality to reduce the
-  //noise in our sensor. If you don't use INPUT_PULLUP
-  pinMode(sensorPin, INPUT_PULLUP);
+ 
+  //Tell Arduino we want this pin to be an input
+  pinMode(sensorPin, INPUT);
 
   //Start the serial monitor
   Serial.begin(9600);
@@ -59,7 +58,7 @@ void loop() {
     Serial.println("Status: Above threshold");
 
     // If it is not greater than the threshold...
-  } else if(sensorValue < threshold) {
+  } else if (sensorValue < threshold) {
 
     // turn off the LED.
     digitalWrite(ledPin, HIGH);
