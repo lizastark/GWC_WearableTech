@@ -1,16 +1,12 @@
 /*
-  MOTION CHANGER 
-  
+  CALIBRATION
+
   Girls Who Code Campus
-  Day 4: Motion Changer Challenge
-  Project Example 1
+  Day 4: Calibrating your sensor
+  Example 2
 
   This example uses the LilyPad accelerometer and the LilyPad Arduino
-  SimpleSnap to create a wearable device that senses tilt.
-
-   If the Motion Changer is oriented straight up, the yellow LED turns on.
-   If the Motion Changer is oriented back, the blue LED turns on.
-   If the Motion Changer is oriented forward, the green LED turns on.
+  SimpleSnap to calibrate the acceleromter. 
 
   This sketch uses the Calibration example (Examples > Analog > Calibration or
   http://www.arduino.cc/en/Tutorial/Calibration) to help us get a better reading.
@@ -19,23 +15,18 @@
 
   1) Upload the sketch.
   2) Open the serial monitor.
-  3) When you see "Calibration Beginning", move your Motion Changer to get a full range of values
+  3) When you see "Calibration Beginning", move your accelerometer to get a full range of values
 
   Once you have it calibrated to the values you want, you can comment out that
-  section of the setup() code and upload it again to get readings for 
-  your if statements.
+  section of the setup() code.
 
 */
 
 // These constants won't change:
 const int zPin = A5;    // z axis pin
 
-const int leftLED = 5;  // left LED pin - BLUE
-const int middleLED = 6;  // middle LED pin - YELLOW
-const int rightLED = 9;  // left LED pin - GREEN
-
-// variables:
-int zValue = 0;         // the z axis value
+  // variables:
+  int zValue = 0;         // the z axis value
 int zMin = 1023;        // minimum sensor value
 int zMax = 0;           // maximum sensor value
 
@@ -92,31 +83,16 @@ void loop() {
 
   //Shows us the values of the accelerometer in the serial monitor
   Serial.print("Z axis = ");
-  Serial.println(zValue);
+  Serial.print(zValue);
+  Serial.print("\t");
 
-  //Conditional to determine left/forward tilt
+  //Conditional to determine if tilted backward
   if (zValue < 110) {
-    digitalWrite(leftLED, HIGH);
-    digitalWrite(middleLED, LOW);
-    digitalWrite(rightLED, LOW);
+    Serial.println("Backward");
 
-    //Conditional to determine center orientation
-  } else if (zValue > 110 && zValue < 130) {
-    digitalWrite(middleLED, HIGH);
-    digitalWrite(leftLED, LOW);
-    digitalWrite(rightLED, LOW);
-
-    //Conditional to determine right/backward tilt
-  } else if (zValue > 130) {
-    digitalWrite(rightLED, HIGH);
-    digitalWrite(leftLED, LOW);
-    digitalWrite(middleLED, LOW);
-
-    //Just in case, turn off all LEDs if you get a weird value
+    //Conditional to determine if tilted forward
   } else {
-    digitalWrite(leftLED, LOW);
-    digitalWrite(middleLED, LOW);
-    digitalWrite(rightLED, LOW);
+    Serial.println("Forward");
   }
 
 

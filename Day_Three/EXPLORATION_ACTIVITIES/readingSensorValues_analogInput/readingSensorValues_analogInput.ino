@@ -17,7 +17,7 @@
 */
 
 //These variables are constant (they do not change):
-const int sensorPin = A6;    // select the input pin for the sensor
+const int sensorPin = A5;    // select the input pin for the sensor
 const int ledPin = 6;     // select the pin for the LED
 
 //These variables will change:
