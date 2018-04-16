@@ -6,7 +6,7 @@
   Example 2
 
   This example uses the LilyPad accelerometer and the LilyPad Arduino
-  SimpleSnap to calibrate the acceleromter. 
+  SimpleSnap to calibrate the acceleromter.
 
   This sketch uses the Calibration example (Examples > Analog > Calibration or
   http://www.arduino.cc/en/Tutorial/Calibration) to help us get a better reading.
@@ -23,10 +23,10 @@
 */
 
 // These constants won't change:
-const int zPin = A5;    // z axis pin
+const int zPin = A2;    // z axis pin
 
-  // variables:
-  int zValue = 0;         // the z axis value
+// variables:
+int zValue = 0;         // the z axis value
 int zMin = 1023;        // minimum sensor value
 int zMax = 0;           // maximum sensor value
 
@@ -86,13 +86,13 @@ void loop() {
   Serial.print(zValue);
   Serial.print("\t");
 
-  //Conditional to determine if tilted backward
+  //Conditional to determine if tilted one way
   if (zValue < 110) {
-    Serial.println("Backward");
+    Serial.println("Tilt State 1");
 
-    //Conditional to determine if tilted forward
+    //Conditional to determine if tilted the other way
   } else {
-    Serial.println("Forward");
+    Serial.println("Tilt State 2");
   }
 
 

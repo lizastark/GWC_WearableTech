@@ -5,7 +5,7 @@
   Day 2: Button Power Challenge
   Example 1
 
-  This example uses the LilyPad Development Board to turn an LED on and off 
+  This example uses the LilyPad ProtoSnap Development Board to turn an LED on and off 
   using a push button.
 
   If the button is pressed, the LED turns on.
@@ -39,7 +39,6 @@ void loop() {
   buttonState = digitalRead(buttonPin);
 
   // check if the push button is pressed.
-  // if it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
     
     // turn LED on:
