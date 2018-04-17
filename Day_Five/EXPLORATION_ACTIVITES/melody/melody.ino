@@ -14,6 +14,7 @@
 */
 
 // don't forget to make a new tab named pitches.h and copy/paste ALL of the notes there
+// https://github.com/lizastark/GWC_WearableTech/blob/master/Day_Five/EXPLORATION_ACTIVITES/melody/pitches.h
 #include "pitches.h"
 
 // variable to store our speaker pin
