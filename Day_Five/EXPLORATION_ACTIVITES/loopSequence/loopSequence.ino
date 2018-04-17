@@ -1,9 +1,9 @@
 /*
-  INTRO TO LOOPS
+  FOR() LOOP LED SEQUENCE
 
   Girls Who Code
   Day 1: Intro to Loops
-  Example 2
+  Example 3
 
   This example uses the LilyPad ProtoSnap Development Board to light LEDs 9-11 on the
   Tri-Color LED in sequence using a for() loop.
@@ -35,7 +35,7 @@ void setup() {
 void loop() {
   // loop from pin 9 to pin 11 to turn each LED on and off:
   for (int thisPin = 9; thisPin < 12; thisPin++) {
-    Serial.println("//----NEW CYCLE THROUGH THE LOOP---->>");
+    Serial.println("//----NEW CYCLE THROUGH THE FOR LOOP---->>");
 
     // turn the pin on:
     digitalWrite(thisPin, HIGH);
@@ -54,5 +54,7 @@ void loop() {
     Serial.print(thisPin);
     Serial.println(" is off");
   }
+
+  Serial.println("*****END THIS FOR LOOP CYCLE*****");
 
 }
