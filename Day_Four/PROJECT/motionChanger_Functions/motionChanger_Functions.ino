@@ -51,15 +51,14 @@ void setup() {
 
   //Comment this out once you have your accelerometer calibrated
 
-  /*
-    // turn on LED to signal the start of the calibration period:
-    pinMode(13, OUTPUT);
-    digitalWrite(13, HIGH);
+  // turn on LED to signal the start of the calibration period:
+  pinMode(13, OUTPUT);
+  digitalWrite(13, HIGH);
 
-    Serial.println("Calibration beginning");
+  Serial.println("Calibration beginning");
 
-    // calibrate during the first five seconds
-    while (millis() < 5000) {
+  // calibrate during the first five seconds
+  while (millis() < 5000) {
     zValue = analogRead(zPin);
 
     // record the maximum sensor value
@@ -71,12 +70,12 @@ void setup() {
     if (zValue < zMin) {
       zMin = zValue;
     }
-    }
+  }
 
-    // signal the end of the calibration period
-    digitalWrite(13, LOW);
-    Serial.println("Calibration ending");
-  */
+  // signal the end of the calibration period
+  digitalWrite(13, LOW);
+  Serial.println("Calibration ending");
+
   //End comment
 }
 
