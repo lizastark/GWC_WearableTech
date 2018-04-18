@@ -6,7 +6,7 @@
   Example 2
 
   This example uses the LilyPad ProtoSnap Development Board to
-  blink an LED on pin 5 ten times using a for() loop, then blink
+  blink an LED on pin 5 five times using a for() loop, then blink
   an LED on pin 6 once.
 
 */
@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   // blink ledPinOne ten times:
-  for (int i = 1; i < 11; i++) {
+  for (int i = 1; i < 5; i++) {
     digitalWrite(ledPinOne, HIGH);
     delay(100);
     digitalWrite(ledPinOne, LOW);

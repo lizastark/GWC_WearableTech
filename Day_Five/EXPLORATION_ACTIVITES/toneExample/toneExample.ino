@@ -3,7 +3,7 @@
 
   Girls Who Code Campus
   Day 5: Get Noisy
-  Example 1
+  Example 5
 
   This example uses the  LilyPad ProtoSnap Plus board
   to control the pitch of the buzzer.

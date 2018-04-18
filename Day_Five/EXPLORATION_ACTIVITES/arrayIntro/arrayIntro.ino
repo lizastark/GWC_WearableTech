@@ -3,7 +3,7 @@
 
   Girls Who Code
   Day 1: Intro to Arrays
-  Example 3
+  Example 1
 
   This example uses the LilyPad ProtoSnap Development Board to light the row of
   white LEDs using an array. Each LED pin is an element stored in an array. We access

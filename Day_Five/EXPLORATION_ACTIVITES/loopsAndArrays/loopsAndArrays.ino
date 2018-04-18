@@ -3,7 +3,7 @@
 
   Girls Who Code
   Day 1: Intro to Loops + Arrays
-  Example 5
+  Example 4
 
   This example uses the LilyPad ProtoSnap Development Board to light the white LEDs
   in sequence using a for() loop and arrays.

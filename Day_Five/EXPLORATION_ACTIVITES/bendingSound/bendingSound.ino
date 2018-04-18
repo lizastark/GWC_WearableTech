@@ -3,7 +3,7 @@
 
   Girls Who Code Campus
   Day 5: Bending Sound
-  Example XX
+  Example 7
 
   This example uses a handmade bend sensor, buzzer, and LilyPad
   Arduino SimpleSnap to control sound. Bend or press the sensor 
