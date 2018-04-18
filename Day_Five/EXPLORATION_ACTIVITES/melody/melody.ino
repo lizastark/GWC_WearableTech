@@ -18,7 +18,7 @@
 #include "pitches.h"
 
 // variable to store our speaker pin
-int speaker = 5;
+int speaker = 7;
 
 // variable to store the number of notes in our array
 int noteCount = 8;
