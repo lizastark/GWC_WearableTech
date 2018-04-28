@@ -1,5 +1,5 @@
-<h3>Wearable Technology + Fashion Design</h3>
-Girls Who Code Campus 2018
+<h1>Wearable Technology + Fashion Design</h1>
+<h4>Girls Who Code Campus 2018</h4>
 
 Welcome to the code repository for Wearable Tech + Fashion Design! Here you will find all of the code for each day of the program for exploration activities and project tutorials.
 
