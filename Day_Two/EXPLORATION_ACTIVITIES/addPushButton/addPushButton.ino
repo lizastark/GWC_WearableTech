@@ -41,13 +41,13 @@ void loop() {
   // check if the push button is pressed.
   if (buttonState == HIGH) {
     
-    // turn LED on:
+    // turn LED off:
     digitalWrite(ledPin, LOW);
     
   }
   else {
     
-    // turn LED off:
+    // turn LED on:
     digitalWrite(ledPin, HIGH);
     
   }
