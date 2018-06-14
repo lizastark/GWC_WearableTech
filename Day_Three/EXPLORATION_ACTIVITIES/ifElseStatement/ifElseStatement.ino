@@ -48,10 +48,10 @@ void loop() {
   Serial.print(sensorValue);
   Serial.print("\t");
 
-  // If the sensor value is greater than the threshold (400 in this case)...
+  // If the sensor value is greater than the threshold (250 in this case)...
   if (sensorValue > threshold) {
 
-    // turn on the LED.
+    // turn off the LED.
     digitalWrite(ledPin, LOW);
 
     // Print the status
@@ -60,7 +60,7 @@ void loop() {
     // If it is not greater than the threshold...
   } else if (sensorValue < threshold) {
 
-    // turn off the LED.
+    // turn on the LED.
     digitalWrite(ledPin, HIGH);
 
     // Print the status
