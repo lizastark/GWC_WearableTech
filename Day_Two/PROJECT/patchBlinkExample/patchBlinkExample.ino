@@ -64,7 +64,7 @@ void loop() {
     digitalWrite(ledPin2, HIGH);
     delay(slowBlink); //
     digitalWrite(ledPin2, LOW);
-    delay(slowBlink)
+    delay(slowBlink);
 
 
   }
