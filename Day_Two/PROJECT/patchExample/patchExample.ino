@@ -42,24 +42,27 @@ void loop() {
   // read the state of the switch value:
   buttonState = digitalRead(buttonPin);
 
-  // print it to the serial monitor
-  Serial.println(buttonState);
-
-  // check if the pushbutton is pressed.
-  // if it is, the buttonState is HIGH:
+  // check if the switch is turned on or off
+  // if the switch is set to OFF
   if (buttonState == HIGH) {
 
-    // turn both LEDs on:
-    digitalWrite(ledPin, HIGH);
-    digitalWrite(ledPin2, HIGH);
+    // turn both LEDs off:
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin2, LOW);
+
+    // print it to the serial monitor
+    Serial.println("LEDs are OFF");
 
 
   }
-  else {
+  else { // if the switch is set to ON
 
-    // turn LED off:
-    digitalWrite(ledPin, LOW);
-    digitalWrite(ledPin2, LOW);
+    // turn the LEDs on:
+    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin2, HIGH);
+
+    // print it to the serial monitor
+    Serial.println("LEDs are ON");
 
 
   }
