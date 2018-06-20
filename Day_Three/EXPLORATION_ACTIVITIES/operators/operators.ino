@@ -52,7 +52,7 @@ void loop() {
   Serial.print(sensorValue);
   Serial.print("\t");
 
-  // If the sensor value is greater than or equal to 250...
+  // If the sensor value is less than or equal to 250...
   if (sensorValue <= 250) {
 
     // turn on the red LED.

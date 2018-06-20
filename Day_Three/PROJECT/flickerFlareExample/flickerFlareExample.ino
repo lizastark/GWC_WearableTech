@@ -49,7 +49,7 @@ void loop() {
   Serial.print("\t");
   
   //map the sensor values based on your readings
-  int newSensorValue = map(sensorValue, 15, 160, 0, 255);
+  int newSensorValue = map(sensorValue, 15, 1023, 0, 255);
   
   // uncomment the line below to constrain the values 
   // in case you start getting negative numbers
