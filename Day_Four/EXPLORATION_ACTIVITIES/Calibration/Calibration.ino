@@ -34,6 +34,7 @@ int zMax = 0;           // maximum sensor value
 void setup() {
 
   Serial.begin(9600);
+  pinMode(zPin, INPUT);
 
   /*
      This is the calibration part of the sketch. Once you upload it,
