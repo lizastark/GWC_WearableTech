@@ -2,7 +2,7 @@
   FOR() LOOPS && ARRAYS
 
   Girls Who Code
-  Day 1: Intro to Loops + Arrays
+  Day 5: Intro to Loops + Arrays
   Example 4
 
   This example uses the LilyPad ProtoSnap Development Board to light the white LEDs
@@ -15,11 +15,18 @@
 */
 
 // set a variable to hold the delay() value
-int timer = 1000;     // increase it to slow down the loop
+int timer = 500;     // increase it to slow down the loop
 
+//LilyPad Protosnap Plus Board
+// declare and initalize your array
+int ledPins[] = {A5, 6, A7, A8};
+int pinCount = 4;
+
+/*
+//LilyPad Protosnap Board
 int ledPins[] = {5, 6, A2, A4, A3};
-
 int pinCount = 5;
+*/
 
 void setup() {
   //The loop runs through each pin and tells the Arduino it is an output
