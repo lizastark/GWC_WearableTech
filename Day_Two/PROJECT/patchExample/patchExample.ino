@@ -1,69 +1,55 @@
 /*
-  PATCH EXAMPLE
+ * What Do You Stand For? Patch
+ * By Your Names(s)
+ * 
+ * This sketch turns three LEDs on or off based on the state of a switch. This is the code
+ * used in the example video. 
+ * 
+ */
 
-  Girls Who Code Campus
-  Day 2: What Do You Stand For? Patch
-  Project Example 1
-
-  This example uses the slide switch, LEDs, and the LilyPad Arduino
-  SimpleSnap to control the behavior of the LEDs.
-
-  If the slide switch is off, both LEDs will be off.
-  If the slide switch is on, both LEDs will be on.
-
-  This sketch uses the button tutorial (File > Examples > Digital >
-  Button) or http://www.arduino.cc/en/Tutorial/Button
-
-*/
-
-// constants won't change. They're used here to
-// set pin numbers:
-const int buttonPin = A2;     // the number of the pushbutton pin
-const int ledPin =  6;      // the number of the LED pin
-const int ledPin2 = A5;
-
-
-// variables will change:
-int buttonState = 0;         // variable for reading the pushbutton status
+int led = 5;  
+int led2 = 6;
+int led3 = 9;
+int button = A5;
+int buttonState;
 
 void setup() {
-  // initialize the LED pin as an output:
-  pinMode(ledPin, OUTPUT);
-  pinMode(ledPin2, OUTPUT);
+  // put your setup code here, to run once:
+  //LEDs
+  pinMode(led, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
 
-  // initialize the pushbutton pin as an input:
-  pinMode(buttonPin, INPUT_PULLUP);
+  //push button
+  pinMode(button, INPUT_PULLUP);
 
-  // start the serial monitor
   Serial.begin(9600);
 }
 
 void loop() {
-  // read the state of the switch value:
-  buttonState = digitalRead(buttonPin);
+  // put your main code here, to run repeatedly:
 
-  // check if the switch is turned on or off
-  // if the switch is set to OFF
-  if (buttonState == HIGH) {
+  //read the button
+  buttonState = digitalRead(button);
+  
+  //check to see if button is pressed
+  if (buttonState == LOW) {
 
-    // turn both LEDs off:
-    digitalWrite(ledPin, LOW);
-    digitalWrite(ledPin2, LOW);
-
-    // print it to the serial monitor
-    Serial.println("LEDs are OFF");
-
-
+    //if pressed, turn on LED
+    digitalWrite(led, HIGH);
+    digitalWrite(led2, HIGH);
+    digitalWrite(led3, HIGH);
+    
+    Serial.println("The LED is on!");
   }
-  else { // if the switch is set to ON
+  else {
 
-    // turn the LEDs on:
-    digitalWrite(ledPin, HIGH);
-    digitalWrite(ledPin2, HIGH);
-
-    // print it to the serial monitor
-    Serial.println("LEDs are ON");
-
-
+    // if not pressed, turn off LED
+    digitalWrite(led, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    
+    Serial.println("The LED is on!");
   }
 }
+
