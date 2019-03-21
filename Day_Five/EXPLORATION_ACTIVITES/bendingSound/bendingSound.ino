@@ -3,27 +3,25 @@
 
   Girls Who Code Campus
   Day 5: Bending Sound
-  Example 7
+  Example 1
 
   This example uses a handmade bend sensor, buzzer, and LilyPad
-  Arduino SimpleSnap to control sound. Bend or press the sensor 
+  ProtoSnap Plus board to control sound. Bend or press the sensor 
   to change the frequency or pitch of the noise made by the buzzer
 
-  The LilyPad Arduino reads the analog values coming in, then maps
+  The LilyPad  reads the analog values coming in, then maps
   them to a specific range of pitches. If you are not getting any
   sound or values in the serial monitor, use the sketch without mapping
   then adjust the mapped values.
 
   This sketch is adapted from the Pitch follower example (Examples >
-  Digital > pitchFollower).
-
+  Digital > pitchFollower)
 */
 
-//These variables are constant (they do not change):
-const int buzzerPin = 5; //variable to store the buzzer pin
-const int bendSensorPin = A2; //variable to store the bend sensor pin
+int buzzerPin = A3; //variable to store the buzzer pin
 
-//These variables will change:
+int bendSensorPin = A9; //variable to store the bend sensor pin
+
 int bendSensorReading; //variable to store the values from the bend sensor
 // i.e. how much we are bending or pressing
 
@@ -32,8 +30,7 @@ void setup() {
   //Tell Arduino we want this pin to be an output
   pinMode(buzzerPin, OUTPUT);
 
-  //We need to activate a special functionality to reduce the
-  //noise in our sensor. If you don't use INPUT_PULLUP
+  //Configure the input pin
   pinMode(bendSensorPin, INPUT_PULLUP);
 
   //Start the serial monitor
@@ -51,13 +48,13 @@ void loop() {
   Serial.print(bendSensorReading);
   Serial.print("\t");
 
-  // map the analog input range (in this case, 15 - 375 from
+  // map the analog input range (in this case, 20 - 50 from
   // the bend sensor) to the output pitch range (75 - 2400Hz)
   // change the minimum and maximum input numbers below depending
   // on the range your sensor's giving.
   // map(value, fromLow, fromHigh, toLow, toHigh)
 
-  int myPitch = map(bendSensorReading, 15, 375, 75, 2400);
+  int myPitch = map(bendSensorReading, 20, 50, 75, 2400);
   // change these values based on the readings you get from your own sensor
   // if you want to change the frequency range, change the last two numbers
 
