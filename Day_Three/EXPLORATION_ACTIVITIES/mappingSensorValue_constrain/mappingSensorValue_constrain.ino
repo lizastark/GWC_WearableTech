@@ -3,10 +3,10 @@
  * DAY 3, PART 2
  * Mapping sensor values
  * By Your Name(s)
- * This sketch uses the mapping function to
- * make sense of the incoming sensor data.
+ * Description of what the code does
  * 
  */
+
 
 
 int sensorPin = A2;
@@ -25,7 +25,8 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   sensorVal = analogRead(sensorPin); //read the sensor data coming in
-  int newSensorVal = map(sensorVal,400,275,255,0); //create a new variable to store the mapped values
+  int newSensorVal = map(sensorVal,330,240,255,0); //create a new variable to store the mapped values
+  newSensorVal = constrain(newSensorVal,0,255);
   Serial.println(newSensorVal);         //print the sensor values to the serial monitor
   analogWrite(ledPin, newSensorVal);    //write the values of the sensor to the LED
 

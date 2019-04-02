@@ -4,10 +4,10 @@
   Girls Who Code
   Day 3: Analog Output
 
-  This example uses the LilyPad ProtoSnap Plus board to fade an LED on pin 9 using 
+  This example uses the LilyPad ProtoSnap Plus board to fade an LED on pin A8 using 
   the analogWrite() function. This function uses Pulse Width Modulation (PWM) so 
   if you want to use this sketch with another pin, it must be PWM-enabled. You can usually
-  tell because a pin will have a "~" before it (e.g. ~9)
+  tell because a pin will have a "~" before it (e.g. ~A8)
 
   This sketch uses the Fade example (File > Examples > Basic >
   Fade) or http://www.arduino.cc/en/Tutorial/Fade.
@@ -15,7 +15,7 @@
  
 */
 
-int ledPin = 9;       // the PWM pin the LED is attached to
+int ledPin = A8;       // the PWM pin the LED is attached to
 int brightness = 0;    // how bright the LED is
 int fadeAmount = 5;    // how many points to fade the LED by. Try tinkering with this 
                        // value to change the fade speed.
@@ -29,7 +29,7 @@ void setup() {
 // the loop routine runs over and over again forever:
 void loop() {
   // set the brightness of pin A8:
-  analogWrite(ledPin , brightness);
+  analogWrite(ledPin, brightness);
 
   // change the brightness for next time through the loop:
   brightness = brightness + fadeAmount;
