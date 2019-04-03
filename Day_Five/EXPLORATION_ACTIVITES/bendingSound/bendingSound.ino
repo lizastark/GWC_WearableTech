@@ -1,22 +1,16 @@
 /*
-  BENDING SOUND
+ * DAY 5
+ * Bending Sound
+ * By Liza Stark
+ * This sketch reads values from a bend sensor, then
+ * maps them onto different frequencies using the tone()
+ * function. Bending the sensor back and forth will
+ * cause the pitch to change. 
+ * 
+ * Adapted from the toneKeyboard example sketch.
+ * 
+ */
 
-  Girls Who Code Campus
-  Day 5: Bending Sound
-  Example 1
-
-  This example uses a handmade bend sensor, buzzer, and LilyPad
-  ProtoSnap Plus board to control sound. Bend or press the sensor 
-  to change the frequency or pitch of the noise made by the buzzer
-
-  The LilyPad  reads the analog values coming in, then maps
-  them to a specific range of pitches. If you are not getting any
-  sound or values in the serial monitor, use the sketch without mapping
-  then adjust the mapped values.
-
-  This sketch is adapted from the Pitch follower example (Examples >
-  Digital > pitchFollower)
-*/
 
 int buzzerPin = A3; //variable to store the buzzer pin
 
@@ -54,7 +48,7 @@ void loop() {
   // on the range your sensor's giving.
   // map(value, fromLow, fromHigh, toLow, toHigh)
 
-  int myPitch = map(bendSensorReading, 20, 50, 75, 2400);
+  int myPitch = map(bendSensorReading, 50, 400, 75, 2400);
   // change these values based on the readings you get from your own sensor
   // if you want to change the frequency range, change the last two numbers
 
@@ -66,5 +60,6 @@ void loop() {
   tone(buzzerPin, myPitch, 10);
 
   // add a quick delay in between sensor readings to distinguish between frequencies
-  delay(1);        
+  delay(1);
 }
+

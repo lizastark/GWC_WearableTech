@@ -3,7 +3,7 @@
 
   Girls Who Code Campus
   Day 5: Get Noisy
-  Example 5
+  Example 1
 
   This example uses the  LilyPad ProtoSnap Plus board
   to control the pitch of the buzzer.
@@ -21,8 +21,7 @@
 //tell Arduino to include the file with the notes in it
 #include "pitches.h"
 
-//These variables are constant (they do not change):
-const int buzzerPin = A3 ; //variable to store the buzzer pin
+int buzzerPin = A3; //variable to store the buzzer pin
 
 void setup() {
   // put your setup code here, to run once:
@@ -35,8 +34,16 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  //Play a G note
-  tone(buzzerPin, NOTE_G1);
+  //Play a C note
+  tone(buzzerPin, NOTE_C4);
+  delay(500);
 
+  //Play a G note
+  tone(buzzerPin, NOTE_G3);
+  delay(500);
+
+  //Play an A note
+  tone(buzzerPin, NOTE_A3);
+  delay(500);
 
 }
