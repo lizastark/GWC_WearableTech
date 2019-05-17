@@ -48,7 +48,7 @@ void loop() {
   // on the range your sensor's giving.
   // map(value, fromLow, fromHigh, toLow, toHigh)
 
-  int myPitch = map(bendSensorReading, 50, 400, 75, 2400);
+  int myPitch = map(bendSensorReading, 25, 42, 75, 2400);
   // change these values based on the readings you get from your own sensor
   // if you want to change the frequency range, change the last two numbers
 

@@ -26,8 +26,8 @@
 #include "pitches.h"
 
 // variables to store the bend sensor and buzzer pins
-int buzzerPin = 9;
-int bendSensorPin = A3;
+int buzzerPin = A3;
+int bendSensorPin = A9;
 
 // variable to store the values from the bend sensor
 int bendSensorReading;
@@ -62,7 +62,7 @@ void loop() {
   // on the range your sensor's giving.
   // map(value, fromLow, fromHigh, toLow, toHigh)
 
-  int myPitch = map(bendSensorReading, 120, 450, 75, 1700);
+  int myPitch = map(bendSensorReading, 29, 42, 75, 1700);
 
   //print the new mapped value to see the pitch frequency
   Serial.print("Pitch frequency = ");
